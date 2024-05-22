@@ -30,6 +30,7 @@ You can install them using:
 install.packages(c("shiny", "shinydashboard", "tidyverse", "tidytext", "quanteda", 
                    "quanteda.textstats", "quanteda.textplots", "quanteda.corpora", 
                    "quanteda.sentiment", "ggplot2"))
+```
 
 ## Credits
 This application makes use of the `quanteda.sentiment` library for sentiment analysis functionality. You can find more information about the library here.
