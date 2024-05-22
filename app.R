@@ -138,7 +138,7 @@ server <- function(input, output, session) {
     
   }
   
-  # Observe event when the Analyze button is clicked
+  # Observe event when the Analyze button is clicked in Analysis
   observeEvent(input$analyze_button, {
     req(input$task_select, input$analysis_select)
     
@@ -190,7 +190,7 @@ server <- function(input, output, session) {
     }
   })
   
-  
+  # Observe event when looking at text outputs
   observeEvent(input$task_select, {
     req(input$task_select)
     
@@ -202,6 +202,8 @@ server <- function(input, output, session) {
     }
     req(corp)
     
+    # Generate text in individual text boxes for original and each LLM
+    # Original text box is not collapsed
     output$text_boxes_ui <- renderUI({
       lapply(seq_along(corp), function(i) {
         box(
